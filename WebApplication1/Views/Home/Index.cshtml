@@ -1,20 +1,34 @@
-﻿
+﻿@model FutureValueModel
 @{
-    Layout = null;
+    ViewBag.Title = "Future Value Calculator";
 }
 
-<!DOCTYPE html>
 
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>Home Page</title>
-</head>
-<body>
-    <h1>Future Value Calculations</h1>
-    <p>Customer Name: @ViewBag.Name</p>
-    <p>Future Value: @ViewBag.FV.ToString("C2")</p>
+    <div class="jumbotron"><h1 class="jumbh1">Future Value Calculations</h1></div>
+    
+    <form asp-action="Index" method="post" >
+        <div asp-validation-summary="All"></div>
+        <div >
+            <label  class="" asp-for="MonthlyInvestment">Monthly Investment:</label>
+            <input class="" asp-for="MonthlyInvestment" /><br />
+            <span asp-validation-for="MonthlyInvestment"></span>
+        </div>
+        <div class="">
+            <label  class="" asp-for="YearlyInterestRate">Yearly Iterest Rate:</label>
+            <input class="" asp-for="YearlyInterestRate" /><br />
+        </div>
+        <div class="">
+            <label  class="" asp-for="Years">Number of Years:</label>
+            <input class=""asp-for="Years" /><br />
+        </div>
+        <div class="form-group">
+            <label class="" >Future Value:</label>
+            <input class=""value="@ViewBag.FV.ToString("C2")" readonly><br />
+        </div>
+        <div class=""><button type="submit">Calculate</button><a asp-action="Index">Clear</a></div>
+        
+        
+    </form>
 
 
-</body>
-</html>
+

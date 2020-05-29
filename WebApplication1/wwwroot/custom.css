@@ -1,0 +1,30 @@
+﻿body {
+    padding: 1em;
+    font-family: Arial, Helvetica, sans-serif;
+  
+
+}
+h1{
+    margin-top: 0;
+    color: red;
+}
+
+label{
+    display: inline;
+    width: 10em;
+    padding-right: 1em;
+}
+input{
+    display: block;
+    width: 10em;
+    display: inline;
+    border-radius: 3px;
+
+}
+div{
+    margin-bottom: .5em;
+}
+.jumbh1{
+    margin: auto;
+    width: 600px;
+}
